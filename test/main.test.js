@@ -1,9 +1,31 @@
 /*jslint browser: true, nomen: true */
 /*globals _, async, sinon, define, beforeEach, before, after, afterEach, mocha, dump, window: false, $: false, require: false, Backbone: false, describe, it, expect, window*/
-define(function (require) {
+
+mocha.setup({ ignoreLeaks: true });
+require.config({
+    baseUrl: '/base',
+    paths: {
+        jquery: './components/jquery/jquery',
+        underscore: './components/underscore/underscore',
+        backbone: './components/backbone/backbone'
+    },
+    shim: {
+        jquery: {
+            exports: 'jQuery'
+        },
+        underscore: {
+            exports: '_'
+        },
+        backbone: {
+            deps: ['jquery', 'underscore'],
+            exports: 'Backbone'
+        }
+    }
+});
+
+require([ 'main' ], function (ClearButton) {
     "use strict";
 
-    var ClearButton = require('ClearButton');
 
     describe('views/ClearButton', function () {
         before(function () {
@@ -211,5 +233,5 @@ define(function (require) {
 
     });
 
-
+    window.__testacular__.start();
 });

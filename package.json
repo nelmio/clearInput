@@ -1,0 +1,32 @@
+{
+  "name": "component-clearInput",
+  "version": "0.0.0",
+  "description": "Backbone.View component to clear input of an input field",
+  "main": "main.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "postinstall": "bower install"
+    "test": "./node_modules/.bin/testacular start --single-run --browsers PhantomJS"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nelmio/component-clearInput.git"
+  },
+  "keywords": [
+    "Backbone",
+    "component",
+    "input",
+    "field",
+    "clear"
+  ],
+  "author": "",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "devDependencies": {
+    "testacular": "~0.5.8",
+    "expect.js": "~0.2.0"
+  },
+  "private": true
+}
