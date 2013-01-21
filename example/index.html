@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+    <head>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <title>ClearInput example</title>
+        <link rel="stylesheet" type="text/css" href="../style.css">
+        <script type="text/javascript" charset="utf-8">
+            require = {
+                baseUrl: '../',
+                paths: {
+                    jquery: './components/jquery/jquery',
+                    underscore: './components/underscore/underscore',
+                    backbone: './components/backbone/backbone'
+                },
+                shim: {
+                    jquery: {
+                        exports: 'jQuery'
+                    },
+                    underscore: {
+                        exports: '_'
+                    },
+                    backbone: {
+                        deps: ['jquery', 'underscore'],
+                        exports: 'Backbone'
+                    }
+                }
+            }
+        </script>
+        <script src="../components/requirejs/require.js"></script>
+        <style>
+            .clear-button-container {
+                width: 300px;
+                height: 25px;
+            }
+        </style>
+
+    </head>
+    <body>
+        <h1>Example page for ClearInput</h1>
+        <p>To view this page in a browser, open the file in a browser (make sure the browser can do XHR requests on the file system) or set up a server pointing to the root project and go to http://localhost:PORT_NUMBER/example/</p>
+            <label for="test-field">Test Field</label>
+        <div class="clear-button-container">
+            <input type="text" name="test-field" value="" id="test-field">
+        </div>
+
+        <script>
+            require(['./main'], function (ClearInput) {
+                var input = document.getElementById('test-field');
+                var clearInput = new ClearInput({
+                    input: input
+                });
+                $(input).after(clearInput.el);
+                clearInput.on('clear', function () {
+                    console.log('input cleared!');
+                });
+            });
+        </script>
+
+    </body>
+</html>
