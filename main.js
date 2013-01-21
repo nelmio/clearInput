@@ -8,7 +8,7 @@ define(function (require) {
         _ = require('underscore');
 
     return Backbone.View.extend({
-        template: '<div><i class="icon-remove icon-white"></i></div>',
+        template: '<div><i class="icon-remove icon-white">x</i></div>',
         tagName: 'button',
         attributes: {
             tabindex: '-1'
