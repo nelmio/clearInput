@@ -4,7 +4,7 @@ ClearInput Backbone component
 `Backbone.View` component to clear the content of an input field.
 Bring your own input element!
 
-![ClearInput example](https://raw.github.com/nelmio/component-clearInput/master/docs/clearinput-example.png)
+![ClearInput example](https://raw.github.com/nelmio/clearInput/master/docs/clearinput-example.png)
 
 How to use?
 -----------
