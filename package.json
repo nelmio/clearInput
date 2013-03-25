@@ -1,6 +1,6 @@
 {
   "name": "ClearInput",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Backbone.View component to clear input of an input field",
   "main": "main.js",
   "directories": {
